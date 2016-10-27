@@ -6,11 +6,11 @@ message_query = {
     channel: "channel ID"
   }
 }
-message_response = HTTParty.get("https://slack.com/api/chat.postMessage")
+message_response = HTTParty.get("https://slack.com/api/chat.postMessage", message_query)
 
 list_query = {
   query: {
     token: token
   }
 }
-list_response = HTTParty.get("https://slack.com/api/channel.list")
+list_response = HTTParty.get("https://slack.com/api/channel.list", list_query)
